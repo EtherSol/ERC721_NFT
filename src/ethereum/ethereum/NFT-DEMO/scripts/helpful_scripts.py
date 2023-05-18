@@ -1,5 +1,7 @@
 from brownie import accounts, network, config
 
+
+OPENSEA_URL = "http://testnets.opensea.io/assets/{}/{}"
 LOCAL_BLOCKCHAIN_ENVIRONMENTS = ["hardhat","development","ganache","mainnet-fork"]
 
 
@@ -11,3 +13,4 @@ def get_account(index=None, id=None):
     if id:
         return accounts.load(id)
     return accounts.add(config["wallets"]["from_key"])
+
